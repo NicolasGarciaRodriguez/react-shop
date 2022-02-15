@@ -1,0 +1,9 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .product {
+        margin: 20px;
+        width: 200px;
+    }
+}
