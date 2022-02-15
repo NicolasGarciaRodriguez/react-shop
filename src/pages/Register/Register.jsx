@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import "./register.scss"
 
 const INITIAL_STATE = {
   name: "",
@@ -57,16 +57,20 @@ const submitForm = (ev) => {
 
 
   return (
-    <form onSubmit={submitForm}>
+    <form className="register-form" onSubmit={submitForm}>
+      <div className="name-registerform">
+        <label>Name</label>
+        <input type="text" name="name" value={formData.name} onChange={handleChange}></input>
+      </div>
 
-      <label>Name</label>
-      <input type="text" name="name" value={formData.name} onChange={handleChange}></input>
-
-      <label>Email</label>
-      <input type="text" name="email" value={formData.email} onChange={handleChange}></input>
-
-      <label>Password</label>
-      <input type="password" name="password" value={formData.password} onChange={handleChange}></input>
+      <div className="email-registerform">
+        <label>Email</label>
+        <input type="text" name="email" value={formData.email} onChange={handleChange}></input>
+      </div>
+      <div className="password-registerform">
+        <label>Password</label>
+        <input type="password" name="password" value={formData.password} onChange={handleChange}></input>
+      </div>
 
       <button type="submit">Register</button>
       {registerError ? <p>User already exist</p> : null}

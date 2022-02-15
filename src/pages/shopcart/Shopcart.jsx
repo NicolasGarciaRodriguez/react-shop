@@ -3,6 +3,10 @@ import { useState } from 'react/cjs/react.development'
 import { CartContext } from '../../context/CartContext'
 import { LoginContext } from '../../context/LoginContext';
 import axios from 'axios'
+import "./shopcart.scss";
+
+
+
 const Shopcart = () => {
 
   const { cartItems, setCartItems } = useContext(CartContext)
@@ -29,7 +33,7 @@ const Shopcart = () => {
 
 
   return (
-    <div>
+    <div className="shopcart">
         <h1>shopcart</h1>
         {cartItems.length === 0 ? 
         <p>(El carrito está vacio)</p>

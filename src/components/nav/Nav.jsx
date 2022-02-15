@@ -31,7 +31,7 @@ const Nav = () => {
         {userLogged !== null ?
         <p>Bienvenido {userLogged.name}</p>
       : null}
-        <div className="shopcart">
+        <div className="shopcart-button">
           <Link to="/shopcart"><button>Carrito</button></Link>
           {cartItems.length > 0 ? 
         <>

@@ -1,0 +1,15 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .email-loginform {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+    }
+    .password-loginform {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+    }
+}

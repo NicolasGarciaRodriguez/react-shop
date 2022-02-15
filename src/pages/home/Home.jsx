@@ -6,30 +6,35 @@ import axios from 'axios'
 const Home = () => {
 
   const [productsList, setproductsList] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(null)
+  const [loadingCart, setLoadingCart] = useState(null)
   const { cartItems, setCartItems } = useContext(CartContext)
 
 
 
   const addToCart = (cartItems, item) => {
+    setLoadingCart(true)
     setCartItems([...cartItems, item])
     axios.put(`http://localhost:4000/products/${item.id}`, {
       ...item,
       stock: item.stock - 1
     })
-    console.log(item.stock)
+    .finally(() => {
+      setLoadingCart(false)
+    })
+    .catch((err) => console.log(err))
   }
  
 
   const requestProducts = () => {
-    try {
-      fetch("http://localhost:4000/products")
-      .then(items => items.json())
-      .then(itemsJson => setproductsList(itemsJson))
+    setLoading(true)
+    fetch("http://localhost:4000/products")
+    .then(items => items.json())
+    .then(itemsJson => setproductsList(itemsJson))
+    .finally(() => {
       setLoading(false)
-    } catch {
-      console.error()
-    }
+    })
+    .catch((err) => console.log(err))
   }
 
   useEffect(() => {
@@ -46,11 +51,13 @@ const Home = () => {
               <p>{item.id}</p>
               <h2>{item.name}</h2>
               <p>Precio: {item.precio}</p>
-              {item.stock > 0  ? 
+              {item.stock > 0 && !loadingCart ? 
                 <button onClick={() => addToCart(cartItems, item)}>Añadir al carrito</button>
-                :
+                : loadingCart ?
+                <button disabled>adding to cart...</button>
+                : item.stock <=0 |loadingCart ?
                 <p>No stock</p>
-              }
+                : null}
             </div>
           )
         })}

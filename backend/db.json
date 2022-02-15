@@ -4,31 +4,31 @@
       "id": 1,
       "name": "Disco duro M2",
       "precio": 100,
-      "stock": 4
+      "stock": 3
     },
     {
       "id": 2,
       "name": "Refrigeracion liquida",
       "precio": 125,
-      "stock": 3
+      "stock": 2
     },
     {
       "id": 3,
       "name": "Portatil",
       "precio": 1250,
-      "stock": 2
+      "stock": 1
     },
     {
       "id": 4,
       "name": "Tarjeta grafica",
       "precio": 2400,
-      "stock": 3
+      "stock": 1
     },
     {
       "id": 5,
       "name": "placa base",
       "precio": 150,
-      "stock": 6
+      "stock": 3
     },
     {
       "id": 6,
@@ -46,19 +46,19 @@
       "id": 8,
       "name": "Disco duro SSD",
       "precio": 80,
-      "stock": 1
+      "stock": 3
     },
     {
       "id": 9,
       "name": "Teclado",
       "precio": 130,
-      "stock": 2
+      "stock": 1
     },
     {
       "id": 10,
       "name": "Raton",
       "precio": 50,
-      "stock": 5
+      "stock": 4
     },
     {
       "id": 11,
@@ -76,13 +76,13 @@
       "id": 13,
       "name": "Webcam",
       "precio": 35,
-      "stock": 2
+      "stock": 1
     },
     {
       "id": 14,
       "name": "Fuente de alimentacion",
       "precio": 125,
-      "stock": 6
+      "stock": 5
     }
   ],
   "users": [
@@ -91,6 +91,12 @@
       "email": "test@gmail.com",
       "password": "12345",
       "id": 1
+    },
+    {
+      "name": "pepe",
+      "email": "nicogarcia.ro97@gmail.com",
+      "password": "12345",
+      "id": 2
     }
   ]
 }

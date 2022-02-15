@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { LoginContext } from '../../context/LoginContext';
+import "./login.scss"
 const INITIAL_STATE = {
   email: "",
   password: ""
@@ -43,12 +44,15 @@ const Login = () => {
   }
 
   return (
-    <form onSubmit={submitForm}>
-      <label>email</label>
-      <input name="email" type="text" onChange={changeInput} value={formData.email}></input>
-
-      <label>password</label>
-      <input name="password" type="password" onChange={changeInput} value={formData.password}></input>
+    <form className="login-form" onSubmit={submitForm}>
+      <div className="email-loginform">
+        <label>email</label>
+        <input name="email" type="text" onChange={changeInput} value={formData.email}></input>
+      </div>
+      <div className="password-loginform">
+        <label>password</label>
+        <input name="password" type="password" onChange={changeInput} value={formData.password}></input>
+      </div>
 
       <button type="submit">Log in</button>
       {loginError === true ? <p>User no exist</p> : null}
