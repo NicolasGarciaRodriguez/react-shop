@@ -14,12 +14,13 @@ const Home = () => {
 
   const addToCart = (cartItems, item) => {
     setLoadingCart(true)
-    setCartItems([...cartItems, item])
+    item.stock -= 1
     axios.put(`http://localhost:4000/products/${item.id}`, {
       ...item,
-      stock: item.stock - 1
+      stock: item.stock
     })
     .finally(() => {
+      setCartItems([...cartItems, item])
       setLoadingCart(false)
     })
     .catch((err) => console.log(err))
@@ -44,11 +45,10 @@ const Home = () => {
 
   return (
     <div className="product-list">
-        {loading ? <p>Loading...</p> : null}
+        {loading ? <div className="loading"><p>Loading...</p></div> : null}
         {productsList.map((item) => {
           return (
             <div className="product" key={item.id}>
-              <p>{item.id}</p>
               <h2>{item.name}</h2>
               <p>Precio: {item.precio}</p>
               {item.stock > 0 && !loadingCart ? 

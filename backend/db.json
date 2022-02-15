@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Disco duro M2",
       "precio": 100,
-      "stock": 3
+      "stock": 1
     },
     {
       "id": 2,
       "name": "Refrigeracion liquida",
       "precio": 125,
-      "stock": 2
+      "stock": 1
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "id": 6,
       "name": "Monitor",
       "precio": 250,
-      "stock": 7
+      "stock": 6
     },
     {
       "id": 7,
@@ -83,6 +83,42 @@
       "name": "Fuente de alimentacion",
       "precio": 125,
       "stock": 5
+    },
+    {
+      "id": 15,
+      "name": "Camara CANON",
+      "precio": 1025,
+      "stock": 2
+    },
+    {
+      "id": 16,
+      "name": "PlayStation",
+      "precio": 400,
+      "stock": 4
+    },
+    {
+      "id": 17,
+      "name": "Nintendo switch",
+      "precio": 399,
+      "stock": 3
+    },
+    {
+      "id": 18,
+      "name": "Nintendo switch Lite",
+      "precio": 299,
+      "stock": 5
+    },
+    {
+      "id": 19,
+      "name": "Disco duro HDD 1T",
+      "precio": 100,
+      "stock": 3
+    },
+    {
+      "id": 20,
+      "name": "Monitor 4k",
+      "precio": 2345,
+      "stock": 1
     }
   ],
   "users": [
@@ -91,12 +127,6 @@
       "email": "test@gmail.com",
       "password": "12345",
       "id": 1
-    },
-    {
-      "name": "pepe",
-      "email": "nicogarcia.ro97@gmail.com",
-      "password": "12345",
-      "id": 2
     }
   ]
 }

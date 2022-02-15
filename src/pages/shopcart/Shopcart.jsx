@@ -14,14 +14,22 @@ const Shopcart = () => {
   const {userLogged} = useContext(LoginContext)
   let itemPrices = []
 
+
+
   const deleteItem = (item, index) => {
+
+    // Elimina el item
     const cartItemsTemp = [...cartItems]
     cartItemsTemp.splice(index, 1)
     setCartItems(cartItemsTemp)
+
+    // Elimina el precio
     itemPrices.splice(index, 1)
+
+    // Devuelve el stock
     axios.put(`http://localhost:4000/products/${item.id}`, {
       ...item,
-      stock: item.stock
+      stock: item.stock + 1
     })
   }
 
@@ -42,9 +50,10 @@ const Shopcart = () => {
           itemPrices.push(item.precio)
           return (
             <div key={item.id + Math.random(100, 1000)}>
-              <p>{item.name}</p>
+              <h3>{item.name}</h3>
               <p>Precio: {item.precio}</p>
-              <button onClick={() => deleteItem(item, index)}>Delete</button>
+              <p>Stock: {item.stock}</p>
+              <button onClick={() => deleteItem(item, index)}>Remove</button>
             </div>
           )
         })}

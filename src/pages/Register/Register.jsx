@@ -16,11 +16,14 @@ const Register = () => {
 const navigate = useNavigate()
 const [formData, setFormData] = useState(INITIAL_STATE)
 const [registerError, setRegisterError] = useState(null)
+const [loading, setLoading] = useState(false)
+
 
 const handleChange = (ev) => {
   const {name, value} = ev.target
   setFormData({...formData, [name]: value})
 }
+
 
 
 const postUser = (formData) => {
@@ -36,6 +39,7 @@ const postUser = (formData) => {
 
 
 const registerUser = (formData) => {
+  setLoading(true)
   axios.get("http://localhost:4000/users")
   .then((res) => {
     const users = res.data
@@ -47,6 +51,8 @@ const registerUser = (formData) => {
         postUser(formData)
     }
   })
+  .finally(() => setLoading(false))
+  .catch((err) => console.log(err))
 }
 
 
@@ -57,7 +63,12 @@ const submitForm = (ev) => {
 
 
   return (
-    <form className="register-form" onSubmit={submitForm}>
+    <>
+    <div className="register-page">
+      {loading ? 
+      <p>Loading...</p>
+      :
+      <form className="register-form" onSubmit={submitForm}>
       <div className="name-registerform">
         <label>Name</label>
         <input type="text" name="name" value={formData.name} onChange={handleChange}></input>
@@ -71,10 +82,11 @@ const submitForm = (ev) => {
         <label>Password</label>
         <input type="password" name="password" value={formData.password} onChange={handleChange}></input>
       </div>
-
       <button type="submit">Register</button>
       {registerError ? <p>User already exist</p> : null}
-    </form>
+    </form>}
+    </div>
+    </>
   )
 }
 

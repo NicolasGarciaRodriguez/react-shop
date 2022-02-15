@@ -13,9 +13,11 @@ const Login = () => {
   const [formData, setformData] = useState(INITIAL_STATE)
   const {setUserLogged} = useContext(LoginContext)
   const [loginError, setLoginError] = useState(false)
+  const [loading, setLoading] = useState(false)
 
 
   const loginUser = (formData) => {
+    setLoading(true)
     fetch("http://localhost:4000/users").then((res) => res.json()).then((userJSON) => {
       const user = userJSON
       const userExist = user.find((el) => el.password === formData.password && el.email === formData.email)
@@ -28,6 +30,8 @@ const Login = () => {
         setLoginError(true)
       }
     })
+    .finally(() => setLoading(false))
+    .catch((err) => console.log(err))
   }
 
 
@@ -44,19 +48,25 @@ const Login = () => {
   }
 
   return (
+    <div className="login-page">
+    {loading ? 
+    <p>Loading...</p>
+    :
     <form className="login-form" onSubmit={submitForm}>
-      <div className="email-loginform">
-        <label>email</label>
-        <input name="email" type="text" onChange={changeInput} value={formData.email}></input>
-      </div>
-      <div className="password-loginform">
-        <label>password</label>
-        <input name="password" type="password" onChange={changeInput} value={formData.password}></input>
-      </div>
+    <div className="email-loginform">
+      <label>email</label>
+      <input name="email" type="text" onChange={changeInput} value={formData.email}></input>
+    </div>
+    <div className="password-loginform">
+      <label>password</label>
+      <input name="password" type="password" onChange={changeInput} value={formData.password}></input>
+    </div>
 
-      <button type="submit">Log in</button>
-      {loginError === true ? <p>User no exist</p> : null}
-    </form>
+    <button type="submit">Log in</button>
+    {loginError === true ? <p>User no exist</p> : null}
+  </form>
+    }
+    </div>
   )
 }
 
