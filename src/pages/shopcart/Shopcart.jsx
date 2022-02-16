@@ -11,7 +11,7 @@ const Shopcart = () => {
 
   const { cartItems, setCartItems } = useContext(CartContext)
   const [totalPrice, setTotalPrice] = useState(0)
-  const [productStock, setProductStock] = useState(0)
+  // const [productStock, setProductStock] = useState(0)
   const {userLogged} = useContext(LoginContext)
   let itemPrices = []
 
@@ -20,8 +20,14 @@ const Shopcart = () => {
   const deleteItem = (item, index) => {
     // Elimina el item
     if (item.carrito > 1) {
-      item.carrito -= 1
       item.stock += 1
+      item.carrito -= 1
+      setTotalPrice(totalPrice - item.precio)
+      axios.put(`http://localhost:4000/products/${item.id}`, {
+        ...item,
+        stock: item.stock,
+        carrito: item.carrito
+      })
     } else {
       const cartItemsTemp = [...cartItems]
       cartItemsTemp.splice(index, 1)
@@ -29,20 +35,16 @@ const Shopcart = () => {
       // Elimina el precio
       itemPrices.splice(index, 1)
       // Devuelve el stock
-      checkStock(item)
+      item.stock += 1
+      item.carrito -= 1
       axios.put(`http://localhost:4000/products/${item.id}`, {
         ...item,
-        stock: item.stock + 1,
-        carrito: item.carrito -= 1
+        stock: item.stock,
+        carrito: item.carrito
       })
     }
   }
 
-  const checkStock = (item) => {
-    axios.get(`http://localhost:4000/products/${item.id}`)
-    .then((res) => setProductStock(res.stock))
-    .finally(() => console.log(productStock))
-  }
 
 
   useEffect(() => {

@@ -4,21 +4,21 @@
       "id": 1,
       "name": "Disco duro M2",
       "precio": 100,
-      "stock": 1,
-      "carrito": 1
+      "stock": 3,
+      "carrito": 0
     },
     {
       "id": 2,
       "name": "Refrigeracion liquida",
       "precio": 125,
-      "stock": 1,
-      "carrito": 1
+      "stock": 2,
+      "carrito": 0
     },
     {
       "id": 3,
       "name": "Portatil",
       "precio": 1250,
-      "stock": 1,
+      "stock": 3,
       "carrito": 0
     },
     {
@@ -32,14 +32,14 @@
       "id": 5,
       "name": "placa base",
       "precio": 150,
-      "stock": 3,
+      "stock": 5,
       "carrito": 0
     },
     {
       "id": 6,
       "name": "Monitor",
       "precio": 250,
-      "stock": 6,
+      "stock": 5,
       "carrito": 0
     },
     {
