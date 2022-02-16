@@ -9,21 +9,38 @@ const Home = () => {
   const [loading, setLoading] = useState(null)
   const [loadingCart, setLoadingCart] = useState(null)
   const { cartItems, setCartItems } = useContext(CartContext)
-
+  const listaDeRepetidos = []
 
 
   const addToCart = (cartItems, item) => {
+    debugger
     setLoadingCart(true)
-    item.stock -= 1
-    axios.put(`http://localhost:4000/products/${item.id}`, {
-      ...item,
-      stock: item.stock
-    })
-    .finally(() => {
-      setCartItems([...cartItems, item])
-      setLoadingCart(false)
-    })
-    .catch((err) => console.log(err))
+    if (item.carrito > 0) {
+      item.stock -= 1
+      item.carrito += 1
+      axios.put(`http://localhost:4000/products/${item.id}`, {
+        ...item,
+        stock: item.stock
+      })
+      .finally(() => {
+        cartItems.pop()
+        setCartItems([...cartItems, item])
+        setLoadingCart(false)
+      })
+    } else {
+      listaDeRepetidos.push(...listaDeRepetidos, item)
+      item.stock -= 1
+      item.carrito += 1
+      axios.put(`http://localhost:4000/products/${item.id}`, {
+        ...item,
+        stock: item.stock
+      })
+      .finally(() => {
+        setCartItems([...cartItems, item])
+        setLoadingCart(false)
+      })
+      .catch((err) => console.log(err))
+    }
   }
  
 

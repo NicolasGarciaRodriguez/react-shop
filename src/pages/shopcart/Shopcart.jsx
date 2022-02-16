@@ -11,28 +11,38 @@ const Shopcart = () => {
 
   const { cartItems, setCartItems } = useContext(CartContext)
   const [totalPrice, setTotalPrice] = useState(0)
+  const [productStock, setProductStock] = useState(0)
   const {userLogged} = useContext(LoginContext)
   let itemPrices = []
 
 
 
   const deleteItem = (item, index) => {
-
     // Elimina el item
-    const cartItemsTemp = [...cartItems]
-    cartItemsTemp.splice(index, 1)
-    setCartItems(cartItemsTemp)
-
-    // Elimina el precio
-    itemPrices.splice(index, 1)
-
-    // Devuelve el stock
-    axios.put(`http://localhost:4000/products/${item.id}`, {
-      ...item,
-      stock: item.stock + 1
-    })
+    if (item.carrito > 1) {
+      item.carrito -= 1
+      item.stock += 1
+    } else {
+      const cartItemsTemp = [...cartItems]
+      cartItemsTemp.splice(index, 1)
+      setCartItems(cartItemsTemp)
+      // Elimina el precio
+      itemPrices.splice(index, 1)
+      // Devuelve el stock
+      checkStock(item)
+      axios.put(`http://localhost:4000/products/${item.id}`, {
+        ...item,
+        stock: item.stock + 1,
+        carrito: item.carrito -= 1
+      })
+    }
   }
 
+  const checkStock = (item) => {
+    axios.get(`http://localhost:4000/products/${item.id}`)
+    .then((res) => setProductStock(res.stock))
+    .finally(() => console.log(productStock))
+  }
 
 
   useEffect(() => {
@@ -47,12 +57,12 @@ const Shopcart = () => {
         <p>(El carrito está vacio)</p>
       : null}
         {cartItems.map((item, index) => {
-          itemPrices.push(item.precio)
+          itemPrices.push(item.precio * item.carrito)
           return (
             <div key={item.id + Math.random(100, 1000)}>
               <h3>{item.name}</h3>
               <p>Precio: {item.precio}</p>
-              <p>Stock: {item.stock}</p>
+              <p>X{item.carrito}</p>
               <button onClick={() => deleteItem(item, index)}>Remove</button>
             </div>
           )

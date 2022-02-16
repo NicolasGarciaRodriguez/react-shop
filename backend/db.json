@@ -4,121 +4,141 @@
       "id": 1,
       "name": "Disco duro M2",
       "precio": 100,
-      "stock": 1
+      "stock": 1,
+      "carrito": 1
     },
     {
       "id": 2,
       "name": "Refrigeracion liquida",
       "precio": 125,
-      "stock": 1
+      "stock": 1,
+      "carrito": 1
     },
     {
       "id": 3,
       "name": "Portatil",
       "precio": 1250,
-      "stock": 1
+      "stock": 1,
+      "carrito": 0
     },
     {
       "id": 4,
       "name": "Tarjeta grafica",
       "precio": 2400,
-      "stock": 1
+      "stock": 6,
+      "carrito": 0
     },
     {
       "id": 5,
       "name": "placa base",
       "precio": 150,
-      "stock": 3
+      "stock": 3,
+      "carrito": 0
     },
     {
       "id": 6,
       "name": "Monitor",
       "precio": 250,
-      "stock": 6
+      "stock": 6,
+      "carrito": 0
     },
     {
       "id": 7,
       "name": "Memoria RAM",
       "precio": 125,
-      "stock": 2
+      "stock": 2,
+      "carrito": 0
     },
     {
       "id": 8,
       "name": "Disco duro SSD",
       "precio": 80,
-      "stock": 3
+      "stock": 3,
+      "carrito": 0
     },
     {
       "id": 9,
       "name": "Teclado",
       "precio": 130,
-      "stock": 1
+      "stock": 1,
+      "carrito": 0
     },
     {
       "id": 10,
       "name": "Raton",
       "precio": 50,
-      "stock": 4
+      "stock": 4,
+      "carrito": 0
     },
     {
       "id": 11,
       "name": "Cascos",
       "precio": 100,
-      "stock": 4
+      "stock": 4,
+      "carrito": 0
     },
     {
       "id": 12,
       "name": "Alfombrilla",
       "precio": 15,
-      "stock": 8
+      "stock": 8,
+      "carrito": 0
     },
     {
       "id": 13,
       "name": "Webcam",
       "precio": 35,
-      "stock": 1
+      "stock": 1,
+      "carrito": 0
     },
     {
       "id": 14,
       "name": "Fuente de alimentacion",
       "precio": 125,
-      "stock": 5
+      "stock": 5,
+      "carrito": 0
     },
     {
       "id": 15,
       "name": "Camara CANON",
       "precio": 1025,
-      "stock": 2
+      "stock": 2,
+      "carrito": 0
     },
     {
       "id": 16,
       "name": "PlayStation",
       "precio": 400,
-      "stock": 4
+      "stock": 4,
+      "carrito": 0
     },
     {
       "id": 17,
       "name": "Nintendo switch",
       "precio": 399,
-      "stock": 3
+      "stock": 3,
+      "carrito": 0
     },
     {
       "id": 18,
       "name": "Nintendo switch Lite",
       "precio": 299,
-      "stock": 5
+      "stock": 5,
+      "carrito": 0
     },
     {
       "id": 19,
       "name": "Disco duro HDD 1T",
       "precio": 100,
-      "stock": 3
+      "stock": 3,
+      "carrito": 0
     },
     {
       "id": 20,
       "name": "Monitor 4k",
       "precio": 2345,
-      "stock": 1
+      "stock": 1,
+      "carrito": 0
     }
   ],
   "users": [
