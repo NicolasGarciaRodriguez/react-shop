@@ -5,140 +5,340 @@
       "name": "Disco duro M2",
       "precio": 100,
       "stock": 3,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/28/288164/kioxia-exceria-480-ssd-sata.jpg",
+      "opiniones": [
+        {
+          "opinonId": 1,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion del disco duro M2"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas del Disco duro M2"
     },
     {
       "id": 2,
       "name": "Refrigeracion liquida",
       "precio": 125,
       "stock": 2,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/47/477333/1839-tempest-gaming-liquid-cooler-120-rgb-kit-de-refrigeracion-liquida.jpg",
+      "opiniones": [
+        {
+          "opinionId": 2,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la refrigeracion liquida"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la refrigeracion liquida"
     },
     {
       "id": 3,
       "name": "Portatil",
       "precio": 1250,
       "stock": 3,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/83/836545/169-hp-omen-16-c0043ns-amd-ryzen-7-5800h-16gb-512gb-ssd-rx-6600m-161.jpg",
+      "opiniones": [
+        {
+          "opinionId": 3,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion del portatil"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas del portatil"
     },
     {
       "id": 4,
       "name": "Tarjeta grafica",
       "precio": 2400,
       "stock": 6,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/40/408347/1571-msi-geforce-rtx-3070-ti-ventus-3x-oc-8gb-gddr6x.jpg",
+      "opiniones": [
+        {
+          "opinionId": 4,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la tarjeta grafica"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la tarjeta grafica"
     },
     {
       "id": 5,
       "name": "placa base",
       "precio": 150,
       "stock": 5,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/34/345325/1505-msi-mag-b550-torpedo.jpg",
+      "opiniones": [
+        {
+          "opinionId": 5,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la placa base"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la placa base"
     },
     {
       "id": 6,
       "name": "Monitor",
       "precio": 250,
       "stock": 5,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/30/309428/1657-newskill-icarus-rgb-ic27qrc-27-led-quadhd-165hz-g-sync-compatible.jpg",
+      "opiniones": [
+        {
+          "opinionId": 6,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion del monitor"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas del monitor"
     },
     {
       "id": 7,
       "name": "Memoria RAM",
       "precio": 125,
       "stock": 2,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/21/217575/1.jpg",
+      "opiniones": [
+        {
+          "opinionId": 7,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la memoria RAM"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la memoria RAM"
     },
     {
       "id": 8,
       "name": "Disco duro SSD",
       "precio": 80,
       "stock": 3,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/51/515561/1771-crucial-p5-plus-500gb-ssd-m2-2280-pcie-40.jpg",
+      "opiniones": [
+        {
+          "opinionId": 8,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion del disco duro SSD"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas del Disco duro SSD"
     },
     {
       "id": 9,
       "name": "Teclado",
       "precio": 130,
       "stock": 1,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/24/249961/suiko.jpg",
+      "opiniones": [
+        {
+          "opinionId": 9,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion del teclado"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas del teclado"
     },
     {
       "id": 10,
       "name": "Raton",
       "precio": 50,
       "stock": 4,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/31/313178/1544-tempest-ms-300-rgb-soldier-raton-gaming-4000dpi.jpg",
+      "opiniones": [
+        {
+          "opinionId": 10,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion del raton"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas del raton"
     },
     {
       "id": 11,
       "name": "Cascos",
       "precio": 100,
       "stock": 4,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/66/669887/1664-tempest-ghs250-rex-rgb-auriculares-gaming.jpg",
+      "opiniones": [
+        {
+          "opinionId": 11,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de los cascos"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de los cascos"
     },
     {
       "id": 12,
       "name": "Alfombrilla",
       "precio": 15,
       "stock": 8,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/41/414384/1656-owlotech-alfombrilla-negra-xxl-1000x600mm.jpg",
+      "opiniones": [
+        {
+          "opinionId": 12,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la alfombrilla"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la alfombrilla"
     },
     {
       "id": 13,
       "name": "Webcam",
       "precio": 35,
       "stock": 1,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/28/285737/owlotech-start-webcam-720p-especificaciones.jpg",
+      "opiniones": [
+        {
+          "opinionId": 13,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la webcam"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la webcam"
     },
     {
       "id": 14,
       "name": "Fuente de alimentacion",
       "precio": 125,
       "stock": 5,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/10/101493/owlotech-bps-600w01.jpg",
+      "opiniones": [
+        {
+          "opinionId": 14,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la fuente de alimentacion"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la fuente de alimentacion"
     },
     {
       "id": 15,
       "name": "Camara CANON",
       "precio": 1025,
       "stock": 2,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/33/332300/1480-canon-eos-m200-241mp-wifi-blanca-ef-15-45mm-f35-63-is-stm.jpg",
+      "opiniones": [
+        {
+          "opinionId": 15,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la camara CANON"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la camara CANON"
     },
     {
       "id": 16,
       "name": "PlayStation",
       "precio": 400,
       "stock": 4,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/18/181577/1.jpg",
+      "opiniones": [
+        {
+          "opinionId": 16,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la playStation"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la playStation"
     },
     {
       "id": 17,
       "name": "Nintendo switch",
       "precio": 399,
       "stock": 3,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/23/233482/consola-nintendo-switch-1351124-81-l.jpg",
+      "opiniones": [
+        {
+          "opinionId": 17,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la Nintendo Switch"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la Nintendo Switch"
     },
     {
       "id": 18,
       "name": "Nintendo switch Lite",
       "precio": 299,
       "stock": 5,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/23/233481/1.jpg",
+      "opiniones": [
+        {
+          "opinionId": 18,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion de la Nintendo Switch Lite"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas de la Nintendo Switch Lite"
     },
     {
       "id": 19,
       "name": "Disco duro HDD 1T",
       "precio": 100,
       "stock": 3,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/12/128272/1282720.jpg",
+      "opiniones": [
+        {
+          "opinionId": 19,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion del disco duro HDD 1T"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas del Disco duro HDD 1T"
     },
     {
       "id": 20,
       "name": "Monitor 4k",
       "precio": 2345,
       "stock": 1,
-      "carrito": 0
+      "carrito": 0,
+      "imagen": "https://thumb.pccomponentes.com/w-300-300/articles/22/223587/1.jpg",
+      "opiniones": [
+        {
+          "opinionId": 20,
+          "name": "PepeElTuercas65",
+          "titulo": "Buen producto",
+          "opinion": "Esta es la opinion del Monitor 4K"
+        }
+      ],
+      "caracteristicas": "Hola soy las caracteristicas del Monitor 4K"
     }
   ],
   "users": [

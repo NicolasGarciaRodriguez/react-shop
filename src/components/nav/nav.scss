@@ -4,19 +4,47 @@ nav {
     justify-content: space-around;
     margin: 10px;
     width: 100vw;
+    background-color: rgb(190, 224, 243);
+    margin: 0px;
+    border-bottom: solid gray 1px;
     .links {
         display: flex;
+        align-items: center;
         ul {
             display: flex;
             list-style: none;
+            text-decoration: none;
             li {
                 margin-right: 20px;
+                font-size: 1.2rem;
+                font-family: Arial, Helvetica, sans-serif;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
             }
         }  
     }
-    .shopcart-button {
+    .welcome-message {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
         align-items: center;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        .shopcart-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(138, 195, 248);
+            border: solid black 1px;
+            border-radius: 5px;
+            width: 100px;
+            margin: 10px;
+                p {
+                    font-size: 1.0rem;
+                }
+        }
     }
 }

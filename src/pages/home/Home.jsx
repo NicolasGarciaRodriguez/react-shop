@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import "./home.scss"
 import { CartContext } from '../../context/CartContext'
 import axios from 'axios'
@@ -11,7 +12,7 @@ const Home = () => {
   const { cartItems, setCartItems } = useContext(CartContext)
 
 
-  const addToCart = (cartItems, item, index) => {
+  const addToCart = (cartItems, item) => {
     setLoadingCart(true)
     if (item.carrito > 0) {
       item.stock -= 1
@@ -69,8 +70,11 @@ const Home = () => {
         {productsList.map((item) => {
           return (
             <div className="product" key={item.id}>
-              <h2>{item.name}</h2>
-              <p>Precio: {item.precio}</p>
+              <Link to={`/product/${item.id}`}>
+                <img src={item.imagen} alt={item.name} />
+                <h2>{item.name}</h2>
+                <p>{item.precio}€</p>
+              </Link>
               {item.stock > 0 && !loadingCart ? 
                 <button onClick={() => addToCart(cartItems, item)}>Añadir al carrito</button>
                 : loadingCart ?

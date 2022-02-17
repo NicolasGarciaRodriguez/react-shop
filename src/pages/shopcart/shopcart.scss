@@ -2,4 +2,80 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    .shopcart-legend {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        background-color: gray;
+        .shopcart-legend-articulo {
+            display: flex;
+        }
+    }
+    .shopcart-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        border-bottom: solid 1px gray;
+        margin-bottom: 40px;
+        .shopcart-articulo {
+            display: flex;
+            flex-direction: column;
+            max-width: 90px;
+            img {
+                width: 100px;
+            }
+            h3 {
+                display: flex;
+                align-items: center;
+            }
+        }
+        p {
+            display: flex;
+            align-items: center; 
+        }
+        .item-button {
+            display: flex;
+            align-items: center;
+            button {
+                background-color: rgb(138, 195, 248);
+                height: 30px;
+            }
+        }
+    }
+}
+.pay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    border: solid gray 1px;
+    padding: 10px;
+    .total-price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: solid gray 1px;
+        p {
+            font-weight: bold;
+        }
+    }
+    .pay-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        button {
+            background-color: rgb(138, 195, 248);
+            height: 50px;
+            width: 90px;
+            color: black;
+            font-size: 1.1rem;
+        }
+    }
 }

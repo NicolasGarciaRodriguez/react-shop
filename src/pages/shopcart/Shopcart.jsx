@@ -55,32 +55,55 @@ const Shopcart = () => {
   return (
     <div className="shopcart">
         <h1>shopcart</h1>
+        <div className="shopcart-legend">
+          <div className="shopcart-legend-articulo">
+            <p>Articulo</p>
+          </div>
+          <p>Precio</p>
+          <p>Unidades</p>
+          <p>Total</p>
+        </div>
         {cartItems.length === 0 ? 
         <p>(El carrito está vacio)</p>
       : null}
         {cartItems.map((item, index) => {
           itemPrices.push(item.precio * item.carrito)
           return (
-            <div key={item.id + Math.random(100, 1000)}>
-              <h3>{item.name}</h3>
-              <p>Precio: {item.precio}</p>
+            <div key={item.id + Math.random(100, 1000)} className="shopcart-item">
+              <div className="shopcart-articulo">
+                <img src={item.imagen} alt={item.name} />
+                <h3>{item.name}</h3>
+              </div>
+              <p>{item.precio}€</p>
               <p>X{item.carrito}</p>
-              <button onClick={() => deleteItem(item, index)}>Remove</button>
+              <div className="item-button">
+                  <button onClick={() => deleteItem(item, index)}>Remove</button>
+              </div>
             </div>
           )
         })}
         {totalPrice > 0  && userLogged === null ?
-        <>
-          <h3>Precio total: {totalPrice}</h3>
-          <button disabled>Pagar</button>
-          <p>debes esta logeado para pagar</p>
-        </>
+        <div className="pay">
+          <div className="total-price">
+            <p>TOTAL</p>
+            <p>{totalPrice}€</p>
+          </div>
+          <div className="pay-button">
+            <button disabled>Pagar</button>
+            <p>debes esta logeado para pagar</p>
+          </div>
+        </div>
           : null}
           {userLogged !== null && cartItems.length > 0 ?
-          <>
-          <h3>Precio total: {totalPrice}</h3>
-          <button>Pagar</button>
-          </>
+          <div className="pay">
+              <div className="total-price">
+                <p>TOTAL</p>
+                <p>{totalPrice}</p>
+              </div>
+              <div className="pay-button">
+                  <button>Pagar</button>
+              </div>
+          </div>
         : null}
     </div> 
   )

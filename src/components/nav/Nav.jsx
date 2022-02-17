@@ -28,17 +28,21 @@ const Nav = () => {
             <li><Link to="/register">Register</Link></li>
           </ul>
         </div>
+        <div className="welcome-message">
         {userLogged !== null ?
         <p>Bienvenido {userLogged.name}</p>
-      : null}
-        <div className="shopcart-button">
-          <Link to="/shopcart"><button>Carrito</button></Link>
-          {cartItems.length > 0 ? 
-        <>
-          <p>({cartItems.length})</p>
-        </>
         : null}
         </div>
+        <Link to="/shopcart">
+          <div className="shopcart-button">
+              <p>Carrito</p>
+            {cartItems.length > 0 ? 
+          <>
+            <p>({cartItems.length})!</p>
+          </>
+          : null}
+          </div>
+        </Link>
       </nav>
     </>
   )

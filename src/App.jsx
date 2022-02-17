@@ -4,6 +4,7 @@ import Login from "./pages/login/Login"
 import Register from "./pages/Register/Register"
 import Shopcart from "./pages/shopcart/Shopcart"
 import Nav from "./components/nav/Nav"
+import ProductDetail from "./pages/ProductDetail/ProductDetail"
 import {Routes, Route } from "react-router-dom"
 import { CartProvider } from './context/CartContext';
 import { LoginProvider } from './context/LoginContext';
@@ -17,6 +18,7 @@ const App = () => {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/product/:itemId" element={<ProductDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/shopcart" element={<Shopcart />} />
