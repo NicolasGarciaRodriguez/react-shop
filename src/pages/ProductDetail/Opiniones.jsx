@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState, useContext } from 'react'
+import "./Opiniones.scss"
 import { useParams } from 'react-router-dom';
 import { LoginContext } from '../../context/LoginContext'
 
@@ -67,7 +68,7 @@ const Opiniones = () => {
     {loading ? 
     <p>Loading...</p>
     :
-    <div>
+    <div className="opinion">
         {item.map((op) => {
             return(
                 <div key={op.opinionId}>
@@ -80,13 +81,13 @@ const Opiniones = () => {
     </div>
     }
     
-    <form onSubmit={submitForm}>
+    <form className="opinion-formulario" onSubmit={submitForm}>
         {userLogged !== null ?
         <h2>Dinos que opinas {userLogged.name}</h2>
         : 
         <h2>Dinos que opinas</h2>}
-        <input type="text" name="titulo" placeholder="Añade un titulo" value={formData.titulo} onChange={handleChange}></input>
-        <input type="text" name="opinion" placeholder="Añade una opinion" value={formData.opinion} onChange={handleChange}></input>
+        <input className="input-title" type="text" name="titulo" placeholder="Añade un titulo" value={formData.titulo} onChange={handleChange}></input>
+        <textarea className="input-opinion" type="text" name="opinion" placeholder="Añade una opinion" value={formData.opinion} onChange={handleChange}></textarea>
         {userLogged !== null ?
         <button type="sumit">Comentar</button>
         :

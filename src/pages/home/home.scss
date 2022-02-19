@@ -3,36 +3,62 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
-    .product {
+    .search-bar {
+        padding-top: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        margin: 15px;
-        width: 300px;
-        padding: 20px;
-        &:hover {
-            border: solid black 1px;
-        }
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        img {
-            width: 200px;
-        }
-        h2 {
-            display: flex;
-            justify-content: center;
-        }
-        p {
-            display: flex;
-            justify-content: center;
-            font-size: 1.2rem;
+        justify-content: center;
+        width: 70%;
+        input {
+            width: 400px;
+            height: 30px;
+            margin: 0 15px 0 0;
         }
         button {
             background-color: rgb(138, 195, 248);
-            height: 30px;
+            height: 36px;
+        }
+    }
+    .list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 15px;
+            width: 300px;
+            padding: 20px;
+            &:hover {
+                border: solid black 1px;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            img {
+                width: 200px;
+            }
+            h2 {
+                display: flex;
+                justify-content: center;
+            }
+            p {
+                display: flex;
+                justify-content: center;
+                font-size: 1.2rem;
+            }
+            button {
+                background-color: rgb(138, 195, 248);
+                height: 30px;
+            }
         }
     }
 }

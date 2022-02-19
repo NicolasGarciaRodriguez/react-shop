@@ -10,6 +10,7 @@ const Home = () => {
   const [loading, setLoading] = useState(null)
   const [loadingCart, setLoadingCart] = useState(null)
   const { cartItems, setCartItems } = useContext(CartContext)
+  const [search, setSearch] = useState("")
 
 
   const addToCart = (cartItems, item) => {
@@ -64,27 +65,52 @@ const Home = () => {
   }, [cartItems])
 
 
+
+  const handleChange = (ev) => {
+    setSearch(ev.target.value)
+    if (ev.target.value === "") {
+      requestProducts()
+    }
+  }
+
+
+  const searchProduct = (search) => {
+    let searchResult = productsList.filter((itemInList) => {
+      if (itemInList.name.toLowerCase().includes(search.toLowerCase())) {
+        return itemInList
+      }
+    })
+    setproductsList(searchResult)
+  }
+
+
   return (
     <div className="product-list">
-        {loading ? <div className="loading"><p>Loading...</p></div> : null}
+      <div className="search-bar">
+        <input value={search} onChange={handleChange} placeholder="Busca tu producto" />
+        <button onClick={() => searchProduct(search)}>Buscar</button>
+      </div>
+      {loading ? <p>Loading...</p> : null}
+      <div className="list">
         {productsList.map((item) => {
           return (
-            <div className="product" key={item.id}>
-              <Link to={`/product/${item.id}`}>
-                <img src={item.imagen} alt={item.name} />
-                <h2>{item.name}</h2>
-                <p>{item.precio}€</p>
-              </Link>
-              {item.stock > 0 && !loadingCart ? 
-                <button onClick={() => addToCart(cartItems, item)}>Añadir al carrito</button>
-                : loadingCart ?
-                <button disabled>adding to cart...</button>
-                : item.stock <=0 |loadingCart ?
-                <p>No stock</p>
-                : null}
-            </div>
+              <div className="product" key={item.id}>
+                <Link to={`/product/${item.id}`}>
+                  <img src={item.imagen} alt={item.name} />
+                  <h2>{item.name}</h2>
+                  <p>{item.precio}€</p>
+                </Link>
+                {item.stock > 0 && !loadingCart ? 
+                  <button onClick={() => addToCart(cartItems, item)}>Añadir al carrito</button>
+                  : loadingCart ?
+                  <button disabled>adding to cart...</button>
+                  : item.stock <=0 |loadingCart ?
+                  <p>No stock</p>
+                  : null}
+              </div>
           )
         })}
+      </div>
     </div>
   )
 }

@@ -1,0 +1,26 @@
+.opinion {
+    margin-top: 10px;
+    background-color: lightgrey;
+    padding: 1px 0px 3px 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.opinion-formulario {
+    display: flex;
+    flex-direction: column;
+    .input-title {
+        width: 30%;
+        height: 20px;
+        margin-bottom: 10px;
+    }
+    .input-opinion {
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 15%;
+        height: 30px;
+        background-color: rgb(138, 195, 248);
+    }
+}

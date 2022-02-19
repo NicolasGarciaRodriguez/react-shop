@@ -3,6 +3,7 @@ import React, { useEffect, useContext, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext'
 import Caracteristicas from './Caracteristicas';
+import "./ProductDetail.scss"
 import Opiniones from './Opiniones';
 
 const ProductDetail = () => {
@@ -69,8 +70,8 @@ const ProductDetail = () => {
     }, [itemId])
 
   return (
-    <div>
-        <div>
+    <div className="product-detail-main">
+        <div className="product-detail">
             {error ? 
             <p>Ha ocurrido un error inesperado</p>
             : null}
@@ -78,27 +79,37 @@ const ProductDetail = () => {
             <p>Loading...</p>
             :
             <>
-            <img src={item.imagen} alt={item.name} />
-            <h1>{item.name}</h1>
-            <p>Precio: {item.precio}</p>
-            {item.stock > 0 && !loadingCart ? 
-            <button onClick={() => addToCart(cartItems, item)}>Añadir al carrito</button>
-            : loadingCart ?
-            <button disabled>adding to cart...</button>
-            : item.stock <=0 |loadingCart ?
-            <p>No stock</p>
-            : null}
+            <div className="detail-image">
+              <img src={item.imagen} alt={item.name} />
+            </div>
+            <div className="detail-data">
+              <div className="detail-data-name_price">
+                <h1>{item.name}</h1>
+                <p>{item.precio}€</p>
+              </div>
+              <div className="product-detail-button">
+                {item.stock > 0 && !loadingCart ? 
+                <button onClick={() => addToCart(cartItems, item)}>Añadir al carrito</button>
+                : loadingCart ?
+                <button disabled>adding to cart...</button>
+                : item.stock <=0 |loadingCart ?
+                <p>No stock</p>
+                : null}
+              </div>
+            </div>
             </>}
         </div>
-        <div className="change-buttons">
-            <button onClick={() => setShowCharacteristics(true)}>Caracteristicas</button>
-            <button onClick={() => setShowCharacteristics(false)}>Opiniones</button>
-        </div>
-        <div>
-            {showCharacteristics ? 
-            <Caracteristicas />
-            :
-            <Opiniones />}
+        <div className="product-detail-footer">
+          <div className="product-detail-change-buttons">
+              <p onClick={() => setShowCharacteristics(true)}>Caracteristicas</p>
+              <p onClick={() => setShowCharacteristics(false)}>Opiniones</p>
+          </div>
+          <div className="detail-footer">
+              {showCharacteristics ? 
+              <Caracteristicas />
+              :
+              <Opiniones />}
+          </div>
         </div>
     </div>
   )

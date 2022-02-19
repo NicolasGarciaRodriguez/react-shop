@@ -15,7 +15,7 @@
           "opinion": "Esta es la opinion del disco duro M2"
         }
       ],
-      "caracteristicas": "Hola soy las caracteristicas del Disco duro M2"
+      "caracteristicas": "No te conformes con menos. Nuestro M.2 NVMe SSD Nfortec Alcyon ofrece una velocidad más rápida con un interfaz NVMe Gen3 compatible con el zócalo M.2 de tu placa base con el que podrás disfrutar de velocidades de hasta 3400 MB/s de lectura y 1950 MB/s de escritura, un incremento de más del 600% con respecto a un SSD con interfaz SATA III convencional."
     },
     {
       "id": 2,
@@ -32,7 +32,7 @@
           "opinion": "Esta es la opinion de la refrigeracion liquida"
         }
       ],
-      "caracteristicas": "Hola soy las caracteristicas de la refrigeracion liquida"
+      "caracteristicas": "Enfría tu procesador. Olvida los viejos ventiladores de aire y pásate a enfriar tu procesador de una forma avanzada y óptima, asegurando menores temperaturas en verano y mayor esperanza de vida en tu equipo. Disfruta de su instalación. Referente a su instalación no tienes de qué preocuparte ya que es mucho más sencilla que los refrigeradores de aire."
     },
     {
       "id": 3,
@@ -49,7 +49,7 @@
           "opinion": "Esta es la opinion del portatil"
         }
       ],
-      "caracteristicas": "Hola soy las caracteristicas del portatil"
+      "caracteristicas": "Mantén la mente fría bajo presión: Con 3 salidas de ventilación y una circulación de aire en 5 direcciones, la tecnología OMEN Tempest Cooling evita el sobrecalentamiento incluso cuando la partida se calienta. Rápida velocidad de actualización en los juegos: Juega al máximo con un gameplay sin tearing a una rápida frecuencia de actualización y elimina el parpadeo con HP Flicker-Free."
     },
     {
       "id": 4,
@@ -66,7 +66,7 @@
           "opinion": "Esta es la opinion de la tarjeta grafica"
         }
       ],
-      "caracteristicas": "Hola soy las caracteristicas de la tarjeta grafica"
+      "caracteristicas": "RTX.  IT’S ON. Disfruta de los mayores éxitos de ventas de hoy como nunca antes con la fidelidad visual del trazado de rayos en tiempo real y el rendimiento definitivo de DLSS con tecnología de IA.LA VICTORIA SE MIDE EN MILISEGUNDOS: NVIDIA Reflex ofrece la máxima ventaja competitiva. La latencia más baja. La mejor capacidad de respuesta. Gracias a las GPU GeForce RTX serie 30 y los monitores NVIDIATU JUEGO CREATIVO:  Lleva tus proyectos creativos a un nuevo nivel con las GPU GeForce RTX serie 30. Ofrece aceleración por IA en las mejores aplicaciones creativas. Con el soporte de la plataforma NVIDIA Studio de controladores dedicados y herramientas exclusivas. Y creado para obtener resultados en un tiempo récord. Tanto si estás renderizando escenas en 3D complejas, editando vídeo de 8K o retransmitiendo con la mejor codificación y calidad de imagen, las GPU GeForce RTX te ofrecen el rendimiento necesario para tus mejores creaciones."
     },
     {
       "id": 5,
@@ -83,7 +83,7 @@
           "opinion": "Esta es la opinion de la placa base"
         }
       ],
-      "caracteristicas": "Hola soy las caracteristicas de la placa base"
+      "caracteristicas": "Equipada con los procesadores AMD Ryzen™ de tercera generación y futuros procesadores AMD Ryzen™ con actualización de la BIOS.Admite memoria DDR4, hasta 5100+(OC) MHz Experiencia de juego Lightning Fast: PCIe 4.0, Lightning Gen 4 x4 M.2 con M.2 Shield Frozr, AMD Turbo USB 3.2 Gen 2.Solución térmica premium: El diseño del disipador de calor extendido con una almohadilla térmica choke adicional con capacidad para 7W/mk y la PCB con 2oz de cobre espesado están construidos para un sistema de alto rendimiento y una experiencia gaming ininterrumpida."
     },
     {
       "id": 6,
@@ -168,7 +168,7 @@
           "opinion": "Esta es la opinion del raton"
         }
       ],
-      "caracteristicas": "Hola soy las caracteristicas del raton"
+      "caracteristicas": "Rapidez y ligereza garantizada. Su peso de 74 g es un factor determinante que te garantiza la rapidez en tus partidas o en tus trabajos de máxima concentración ¡Sentirás como si no tuvieras nada en tu mano! Por otra parte, sus 400 IPS te proporcionará la velocidad y aceleración necesaria para ti y sobretodo gracias a conexión 2,4G hará que detecte cualquier movimiento preciso. Todo, en su unión, forma un ratón pensado para las más altas exigencias del mundo actual."
     },
     {
       "id": 11,
